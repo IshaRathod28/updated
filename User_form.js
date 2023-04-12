@@ -1,5 +1,26 @@
 
 
+CRUD in Human Resources
+An enterprise organization maintains a human resources department that helps manage to staff
+and keep track of existing employees. The HR department manages a relational database
+application with various tables that track different types of employee information:
+• An Employees Table includes attributes such as first and last name, employee
+identification number, contact number, home address, work location, and any other
+relevant personal details.
+• An HR Data Table that includes the employee's payroll information, social security
+number, employee ID and salary.
+• A Locations Table that contains attribute data for each of the company's physical
+locations, including building ID, address, zip code, the name of the manager, etc.
+When a new employee is hired, someone new is added to the payroll, or the company acquires
+a new location, the HR department creates a record to reflect the changes. If the business needs
+to send a letter to one or more employees, the read function might be used to find the correct
+mailing address for the employee. If an employee's salary or contact information changes, the
+HR department may need to update the existing record to reflect the change.
+If an employee leaves the company, the company may choose to perform a soft or
+hard delete of their information in the database. Here, a soft delete might be appropriate as the
+organization wishes to retain data on the individual without cluttering up future searches or
+filtered results.
+
 
 
 Module : User Management
