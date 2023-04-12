@@ -1,3 +1,94 @@
+
+
+
+
+Module : User Management
+Definition:
+Screen Fields:
+Code – Textbox - unique
+First name - Textbox
+Last Name - Textbox
+Email - Textbox
+Gender – Radio (Male, Female)
+Hobbies – Checkbox (Reading, Travelling, Music, Cricket, Dancing, Singing) – consider array of object
+with numeric key and value - [{key: 1, value: “Reading”}]
+Photo – Image upload control
+Country – Dropdown ( Country list – India, USA, etc)
+Table name – users
+Table Fields:
+recid – bigint(20) – Auto Increment and Primary Key
+code – char(6) – this will be unique for all user ( USR001, USR002, etc )
+firstname – varchar(100)
+lastname – varchar(100)
+email - varchar(255)
+gender – char(1) – (“M” for male, “F” for female)
+hobbies – varchar(255) – comma separated key of hobbies (example - 1,3,4)
+photo – varchar(100) – Path of the image will be stored
+country – varchar(30)
+status – char(1) – (“Y” for active, “N” for Inactive)
+dateadded – datetime – current datetime when entry is added.
+dateupdated– datetime – current datetime when entry is updated.
+endeffdt – datetime – current datetime when entry is deleted.
+Functionalities:
+• Listing
+- Display of following fields:
+Code, Name ( Firstname + Lastname), email, image, gender, hobbies, dateadded, status,
+action
+Status – Active / Inactive – It will be a link and by clicking on it, status can be updated. For
+example, if current status is Active and if we click on it, then status will be converted to
+Inactive.
+Action – View, Edit and Delete – View will open separate page where all the details are
+printed. Edit will take to the Edit view and delete will delete the record.in case of delete,
+confirmation box is required.
+Dateformat – 20/06/2022 02:44:22
+• Add & Update Operations
+- Add / update with following fields.
+Code, First name, Last Name, Email, Gender, Hobbies, Photo, Country
+Javascript/client side validation for the above all fields. All fields are mandatory and also
+check for the email validation. Code can be added only in add case, add unique validation for
+code, in edit case it will display as a label only.
+Status will be added as Inactive by default.
+• View Detail Case
+- This will open page where all the below details should be printed.
+- Code, First name, Last Name, Email, Gender, Hobbies, Photo, Country, Date added, Date
+Updated, Status
+• Filters, Sorting & Pagination
+Pagination – Consider search criteria.
+Sorting – name, date
+- Filters: add below filters:
+Search box – search the result by user’s code, firstname, lastname and email
+Gender – Radio filter – Male and Female
+Hobbies – Multi select dropdown
+Status – single select dropdown - Active and Inactive.
+Reset – this will clear the search.
+• Export to CSV / Excel
+- Export the following fields for those records which are currently displayed on the screen.
+Code, Name ( Firstname + Lastname), email, gender, hobbies, status, dateadded,
+dateupdated
+• Import from CSV / Excel
+- Import the following fields to system.
+Code, firstname, lastname, email, gender, hobbies, country
+Import functionality will work on the basis of code. If code is already exist in the system
+then the record should be updated, otherwise new record will be created in the system.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
