@@ -456,3 +456,17 @@ POST middleware and multer module for FormData POST
 requests.
 CSE 154 Node.js Cheat Sheet Summer 2019 - Version 08/21/19
 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ V1.01NODE JSCHEATSHEETADAM ODZIEMKOWSKI 
+HEEELLLOOOOO!I’m Andrei Neagoie, Founder and Lead Instructor of theZeroToMasteryAcademy.AfterworkingasaSeniorSoftwareDeveloperovertheyears,Inowdedicate100%ofmytimeto teachingothersvaluablesoftwaredevelopmentskills,helpthembreakintothetechindustry,and advance their careers.In only a few years, over 600,000 studentsaround the world have taken Zero To Masterycourses and many of them are now working at top tier companies like Apple, Google, Amazon, Tesla,IBM, Facebook, and Shopify, just to name a few.Thischeatsheet, createdbyourNodeJSinstructor(AdamOdziemkowski)providesyou with thekeyNode JSconceptsthatyouneedtoknowandremember. Ifyouwanttonotonlylearn node.jsbutalsogettheexact stepstobuild yourown projectsandget hired asa backend orfullstackdeveloper, thencheckoutourCareerPaths. HappyCoding! AndreiFounder & Lead Instructor, Zero To Mastery Andrei NeagoieP.S. I also recently wrote a book called Principles For Programmers. You can download the first five chapters for free here.
+Node JS Cheat Sheet: Zero To Mastery1Node JS Cheat Sheet: Zero To MasteryTABLE OF CONTENTSRunning Node.jsNode.js Global ObjectNode.js Module SystemThe require FunctionBuilt-in ModulesCreating ModulesECMAScript ModulesNode.js PackagesNPM Commandspackage.jsonnode_modulespackage-lock.jsonNode.js Event EmitterBackend ConceptsExpress.jsGET RoutesPOST RoutesRoutersNode.js Folder StructureCross Origin Resource SharingPM2 CommandsUseful Links
+Node JS Cheat Sheet: Zero To Mastery2Running Node.jsFor running Node.js:CommandCommentsnodeRun the Node REPL in your terminalnode —version  Print your current Node versionnode filename.js Execute the Node code in filename.jsREPL stands for Read Eval Print Loop. This is the list of steps that happenwhen you run the node command and then type some code.Node.js Global ObjectIn Node, we have a global object that we can always access. Features that we expect to be available everywhere live in this global object. For example, to have some code execute after 5 seconds we can use eitherglobal.setTimeout or just setTimeout. The global keyword is optional.setTimeout(() => {   console.log('hello'); }, 5000);Probably the most famous global is global.console.log which we write as just console.log .Node.js Module SystemIn Node.js each file is treated as a separate module. Modules provide us a way of re-using existing code.The require FunctionWe can re-use existing code by using the Node built-in require() function. This function imports code from another module.
+2
+of 14
